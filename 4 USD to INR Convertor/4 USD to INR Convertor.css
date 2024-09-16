@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Oswald:wght@300;400;500;700&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-flow: column;
+    min-height: 100vh;
+    padding: 10px 7%;
+    padding-bottom: 80px;
+    background: linear-gradient(90deg, #2980b9, #eee 50.1%);
+}
+
+.container .product-container{
+    display: flex;
+    flex-wrap: wrap;/*Recodar que como esta en columna se hacen columna y no filas. RECORDAR*/
+    gap: 15px;
+}
+.container .product-container .product{
+    flex: 1 1 300px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0  5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.container .product-container .product img{
+    height: 180px;
+}
+.container .product-container .product h3{
+    font-size: 20px;
+    color: #666;
+}
+.container .product-container .product .amount{
+    padding: 10px 0;
+    color: #2980b9;
+    font-weight: bolder;
+}
+.container .product-container .product .amount .dollar{
+    font-size: 20px;
+}
+.container .product-container .product .amount .price{
+    font-size: 30px;
+}
+.container .product-container .product .btn{
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #333;
+    font-size: 15px;
+    color: #fff;
+    padding: 8px 50px;
+    margin: 8px 0;
+    transition: .2s ease-in-out;
+    font-weight: bolder;
+}
+.container .product-container .product .btn:hover{
+    opacity: .8;
+    letter-spacing: 2px;
+}
+.container .currency-toggler{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.3) 
+}
+.container .currency-toggler span{
+    font-weight: bolder;
+    color: #666;
+    font-size: 20px;
+}
+.container .currency-toggler .toggle{
+    margin: 0 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    background: #2980b9;
+    position: relative;
+    cursor: pointer;
+}
+.container .currency-toggler .toggle::before{
+    content: '';
+    position: absolute;
+    top: 5px; left: 7px;
+    height: 40px; width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .2s ease-out;
+}
+.container .currency-toggler .toggle.active::before{
+    left: calc(100% - 47px);
+    background-color: rgb(14, 241, 90);
+}

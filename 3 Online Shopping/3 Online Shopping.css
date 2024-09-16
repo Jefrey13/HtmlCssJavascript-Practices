@@ -1,0 +1,147 @@
+:root{
+    --red:#ED4C67;
+}
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all .2s;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow: hidden;
+}
+header nav{
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, .8);
+    z-index: 10;
+    display: none; /*OJO---------------------*/
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    list-style: none;
+    height: 100%;
+}
+header nav ul li{
+    cursor: pointer;
+    margin: 2rem 0;
+    animation: navbar .5s linear backwards;
+}
+@keyframes navbar {
+    0%{
+        transform: translateY(-100rem);
+    }
+}
+header nav ul li:nth-child(1){
+    animation-delay: .2s;
+}
+header nav ul li:nth-child(2){
+    animation-delay: .4s;
+}
+header nav ul li:nth-child(3){
+    animation-delay: .6s;
+}
+header nav ul li:nth-child(4){
+    animation-delay: .8s;
+}
+header nav ul li:nth-child(5){
+    animation-delay: 1s;
+}
+header nav ul li a{
+    font-size: 3rem;
+    display: block;
+    height: 5rem;
+    width: 40rem;
+    line-height: 5rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    background: #fff;
+    color: #333;
+    letter-spacing: 1rem;
+}
+header .fa-bars{
+    z-index: 1000;
+    position: fixed;
+    top: 4rem; left: 7rem;
+    color: var(--red);
+    cursor: pointer;
+    font-size: 4rem;
+}
+#home{
+    height: 100vh;
+    width: 100vw;
+    background:#fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#home .content{
+    position: absolute;
+    top: 25%;left: 5%;
+    height: 100%;width: 40vw;
+}
+#home .content h2{
+    font-weight: lighter;
+    font-size: 8rem;
+    color: var(--red);
+}
+#home .content p{
+    font-size: 1.6rem;
+    color:#333;
+    margin: 1rem 0;
+}
+#home .content button{
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    background: var(--red);
+    color: #fff;
+    cursor: pointer;
+    margin: 2rem 0;
+    height: 4rem;
+    width: 18rem;
+}
+#home .content button:hover{
+    letter-spacing: .2rem;
+}
+#home .content .icons{
+    margin-top:7rem;
+
+}
+#home .content .icons a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 5rem;
+    background: var(--red);
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+#home .content .icons a:hover{
+    background-color: #fff;
+    color: #333;
+}
+#home .image{
+    position: absolute;
+    top: 8%; right: 10%;
+}
+#home .image img{
+    width: 40vw;
+}
